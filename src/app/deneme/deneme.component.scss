@@ -1,0 +1,469 @@
+main {
+    font-family: 'Quicksand', sans-serif;
+
+    .design {
+        width: 35rem;
+        height: 35rem;
+        background-color: #39A7FF;
+        position: absolute;
+        z-index: -1;
+        float: right;
+        right: 0;
+    }
+
+    .landing {
+        width: 100%;
+
+        .article{
+            height: 65vh;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: bold;
+            margin-top: 9rem;
+            margin-bottom: 2rem;
+        }
+
+        img {
+            width: 22rem;
+            height: 30rem;
+            margin-top: 4rem;
+            margin-left: 5rem;
+            border-style: double;
+            border-color: #39A7FF;
+        }
+
+        .mobile-title {
+            display: none;
+        }
+
+        .statistic {
+            margin-top: 5rem;
+            margin-left: 2rem;
+
+            .info {
+                justify-content: space-between;
+
+                ul {
+                    list-style: none;
+                    justify-content: left;
+
+                    li {
+                        margin-bottom: 2.5rem;
+                        margin-top: 2rem;
+
+                        .title {
+                            color: #494949;
+                            font-weight: bold;
+                            font-size: 2.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .technologies,
+    .fixed-bottom {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-top: 4rem;
+
+        @media (max-width:992px) {
+            padding: 0 20px 0 20px;
+        }
+
+        div.highway-slider {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 70px;
+
+            div.highway-barrier {
+                overflow: hidden;
+                position: relative;
+            }
+
+            ul.highway-lane {
+                display: flex;
+                height: 100%;
+
+                li.highway-car {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #fff;
+                    color: #343434;
+
+                    img {
+                        width: 2rem;
+                        margin-right: .3rem;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+
+        @keyframes translatestf {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-500%);
+            }
+        }
+
+        #stffull div.highway-barrier {
+            ul.highway-lane {
+                width: 500%;
+
+                li.highway-car {
+                    animation: translatestf 30s linear infinite;
+                }
+            }
+        }
+
+        @keyframes translateinfinite {
+            100% {
+                transform: translateX(calc(-180px * 12));
+            }
+        }
+
+        #infinite div.highway-barrier {
+            background: #fff;
+            box-shadow: 0 3px 20px -6px #39A7FF;
+
+            &::before,
+            &::after {
+                content: " ";
+                position: absolute;
+                z-index: 9;
+                width: 180px;
+                height: 100%;
+            }
+
+            &::before {
+                top: 0;
+                left: 0;
+                background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            &::after {
+                top: 0;
+                right: 0;
+                background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            ul.highway-lane {
+                width: calc(180px * 24);
+
+                li.highway-car {
+                    animation: translateinfinite 25s linear infinite;
+                    display: flex;
+
+                }
+            }
+        }
+    }
+
+    @media (max-width:1354px) {
+        .design {
+            width: 34rem;
+            height: 34rem;
+        }
+
+        .landing {
+            img {
+                width: 20rem;
+                height: 28rem;
+                margin-top: 4rem;
+                margin-left: 1rem;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+                margin-top: 8.5rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    @media (max-width:1251px) {
+        .design {
+            width: 33rem;
+            height: 33rem;
+        }
+
+        .landing {
+            img {
+                width: 19rem;
+                height: 27rem;
+                margin-top: 4rem;
+                margin-left: 0rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                margin-top: 8rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            li {
+                margin-bottom: 1rem !important;
+            }
+        }
+    }
+
+    @media (max-width:1211px) {
+        .design {
+            width: 32rem;
+            height: 32rem;
+        }
+
+        .landing {
+            img {
+                width: 18rem;
+                height: 26rem;
+                margin-top: 4rem;
+                margin-left: 0rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+                margin-top: 8rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            li {
+                margin-bottom: 0rem !important;
+                margin-top: 1.2rem !important;
+            }
+        }
+    }
+
+    @media (max-width:1120px) {
+        .design {
+            width: 30rem;
+            height: 30rem;
+        }
+
+        .landing {
+            img {
+                width: 17rem;
+                height: 25rem;
+                margin-top: 3rem;
+                margin-left: 0rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+                margin-top: 7rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            li {
+                margin-bottom: 0rem !important;
+                margin-top: 1.2rem !important;
+
+                .title {
+                    font-size: 2rem !important;
+                }
+            }
+        }
+    }
+
+    @media (max-width:1045px) {
+        .technologies, .fixed-bottom {
+            padding: 0rem;
+        }
+
+        .landing {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            li .description {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width:929px) {
+        .design {
+            margin-top: 18rem;
+            height: 22rem;
+        }
+
+        .fixed-bottom {
+            display: non;
+        }
+
+        .landing {
+            .article{
+                height: 20vh;
+            }
+            .col {
+                min-width: 100%;
+                text-align: center;
+
+                .web-title {
+                    display: none;
+                }
+
+                .mobile-title {
+                    display: block;
+                }
+
+                h1 {
+                    margin-top: 2rem;
+                }
+            }
+
+            .right {
+                display: inline !important;
+
+                .statistic {
+                    margin: 0rem;
+                    margin-bottom: 2rem;
+
+                    ul {
+                        display: flex !important;
+
+                        li {
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (max-width:768px) {
+        .design {
+            margin-top: 19rem;
+        }
+
+        .landing {
+            .article{
+                height: 25vh;
+            }
+            .right {
+                .image {
+                    img {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        .design {
+            width: 26rem;
+        }
+    }
+
+    @media (max-width:627px) {
+        .design {
+            width: 24rem;
+        }
+    }
+
+    @media (max-width:553px) {
+        .design {
+            width: 22rem;
+        }
+    }
+
+    @media (max-width:499px) {
+        .design {
+            width: 21rem;
+        }
+    }
+
+    @media (max-width:456px) {
+        .article{
+            height: 30vh !important;
+        }
+        .design {
+            margin-top: 20rem;
+        }
+    }
+
+    @media (max-width:443px) {
+        .design {
+            width: 20rem;
+        }
+    }
+
+    @media (max-width:394px) {
+        .design {
+            margin-top: 22rem;
+            width: 19rem;
+        }
+    }
+
+    @media (max-width:387px) {
+        .right img{
+margin-top: 6rem !important;
+        }
+        .design {
+            margin-top: 25rem;
+            width: 18rem;
+        }
+    }
+
+    @media (max-width:353px) {
+        .design {
+            margin-top: 26rem;
+            width: 17rem;
+        }
+    }
+
+    @media (max-width:338px) {
+        .design {
+            margin-top: 28rem;
+            width: 16rem;
+        }
+    }
+
+    @media (max-width:319px) {
+        .design {
+            margin-top: 30rem;
+            width: 15rem;
+        }
+    }
+
+}
