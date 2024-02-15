@@ -4,18 +4,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { DenemeComponent } from './deneme/deneme.component'
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AbouthEditComponent } from './abouth-edit/abouth-edit.component';
+import { ProjectEditComponent } from './project-edit/project-edit.component';
+import { BlogEditComponent } from './blog-edit/blog-edit.component';
+import { PageEditComponent } from './page-edit/page-edit.component';
+import { ThemeEditComponent } from './theme-edit/theme-edit.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DenemeComponent,
     NavbarComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    AbouthEditComponent,
+    ProjectEditComponent,
+    BlogEditComponent,
+    PageEditComponent,
+    ThemeEditComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
