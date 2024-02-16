@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-edit.component.css']
 })
 export class PageEditComponent {
-
+  constructor() { }
 }

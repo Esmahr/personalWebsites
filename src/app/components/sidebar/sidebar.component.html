@@ -1,51 +1,49 @@
 <div class="sidebar d-flex">
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary sidebar-big" style="width: 280px;">
+    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary sidebar-big">
         <a href="#"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi pe-none me-2" width="40" height="32">
-                <use xlink:href="#bootstrap"></use>
-            </svg>
+            class="d-flex pt-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none sidebar-title">
+            <i class="bi bi-envelope-paper-heart mt-1"></i>
             <span class="fs-4">Sidebar</span>
         </a>
-        <hr>
+        <hr class="mt-2">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="admin/abouth" class="nav-link active" aria-current="page">
-                    <i class="bi bi-house"></i>
-                    Home
+                <a routerLink="abouth" routerLinkActive="active" class="nav-link link-body-emphasis">
+                    <span class="icon"><i class="bi bi-house"></i></span>
+                    Hakkımda
                 </a>
             </li>
             <li>
-                <a href="admin/blog" class="nav-link link-body-emphasis">
+                <a routerLink="theme" routerLinkActive="active" class="nav-link link-body-emphasis">
                     <i class="bi bi-speedometer2"></i>
-                    Dashboard
+                    Temalarım
                 </a>
             </li>
             <li>
-                <a href="admin/project" class="nav-link link-body-emphasis">
+                <a routerLink="blog" routerLinkActive="active" class="nav-link link-body-emphasis">
                     <i class="bi bi-table"></i>
-                    Orders
+                    Blog Yazılarım
                 </a>
             </li>
             <li>
-                <a href="admin/theme" class="nav-link link-body-emphasis">
+                <a routerLink="project" routerLinkActive="active" class="nav-link link-body-emphasis">
                     <i class="bi bi-grid"></i>
-                    Products
+                    Projelerim
                 </a>
             </li>
             <li>
-                <a href="admin/page" class="nav-link link-body-emphasis">
+                <a routerLink="page" routerLinkActive="active" class="nav-link link-body-emphasis">
                     <i class="bi bi-person-circle"></i>
-                    Customers
+                    İçerik
                 </a>
             </li>
         </ul>
         <hr>
-        <div class="dropdown">
+        <div class="dropdown pb-3">
             <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                <strong>mdo</strong>
+                <strong class="profile-width">Muhammed Raşit Eşdemir</strong>
             </a>
             <ul class="dropdown-menu text-small shadow">
                 <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -83,13 +81,13 @@
             </li>
             <li>
                 <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
-                    data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                    data-bs-placement="right" aria-label="Blog Yazılarım" data-bs-original-title="Blog Yazılarım">
                     <i class="bi bi-table"></i>
                 </a>
             </li>
             <li>
                 <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
-                    data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                    data-bs-placement="right" aria-label="Projelerim" data-bs-original-title="Products">
                      <i class="bi bi-grid"></i>
                 </a>
             </li>

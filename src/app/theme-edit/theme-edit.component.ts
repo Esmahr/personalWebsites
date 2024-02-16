@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./theme-edit.component.css']
 })
 export class ThemeEditComponent {
-
+  constructor() { }
 }
