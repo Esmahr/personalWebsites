@@ -1,0 +1,9 @@
+.container{
+    background-color: #f6f6f7;
+}
+.row{
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(101,126,174,.25);
+    border-radius: 8px;
+}

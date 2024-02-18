@@ -13,6 +13,7 @@ import { BlogEditComponent } from './blog-edit/blog-edit.component';
 import { PageEditComponent } from './page-edit/page-edit.component';
 import { ThemeEditComponent } from './theme-edit/theme-edit.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

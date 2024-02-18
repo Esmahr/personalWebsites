@@ -77,7 +77,8 @@
 
             <div class="col-12 mb-3">
               <label for="address" class="form-label">Açıklama</label>
-              <textarea type="text" class="form-control" id="description" placeholder="" required=""></textarea>
+              <div class="form-control" id="description" #editor></div>
+              <button type="button" (click)="showEditorData()">show</button>
               <div class="invalid-feedback">
                 Zorunlu alan!
               </div>
