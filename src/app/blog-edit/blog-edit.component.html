@@ -1,1 +1,185 @@
-<p>blog-edit works!</p>
+<div class="container d-grid">
+    <div>
+        <button type="button" class="btn btn-sm btn-primary float-end mt-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Yeni Ekle</button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Yeni Blog</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-control" id="description" #editor></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mt-0" data-bs-dismiss="modal">İptal</button>
+                        <button type="button" class="btn btn-primary mt-0"(click)="showEditorData()">Kaydet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="main-table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="main-th" scope="col">All</th>
+                    <th scope="col">Blog Detay</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th class="main-th" scope="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </th>
+                    <td class="main-td">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        SpringBoot-Hibernate-NPlusOne-Problem
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="../../assets/hb-1.png" alt="">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Açıklama:</th>
+                                                            <td>First</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Etiketler:</th>
+                                                            <td>Mark</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Blog Linki:</th>
+                                                            <td>Jacdddddddddd</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="main-th" scope="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </th>
+                    <td class="main-td">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        SpringBoot-Hibernate-NPlusOne-Problem
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="../../assets/hb-1.png" alt="">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Açıklama:</th>
+                                                            <td>First</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Etiketler:</th>
+                                                            <td>Mark</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Blog Linki:</th>
+                                                            <td>Jacdddddddddd</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="main-th" scope="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </th>
+                    <td class="main-td">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        SpringBoot-Hibernate-NPlusOne-Problem
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="../../assets/hb-1.png" alt="">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Açıklama:</th>
+                                                            <td>First</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Etiketler:</th>
+                                                            <td>Mark</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Blog Linki:</th>
+                                                            <td>Jacdddddddddd</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
