@@ -5,7 +5,7 @@ import { DescriptionService } from '../services/description.service';
 @Component({
   selector: 'app-abouth-edit',
   templateUrl: './abouth-edit.component.html',
-  styleUrls: ['./abouth-edit.component.css']
+  styleUrls: ['./abouth-edit.component.scss']
 })
 export class AbouthEditComponent implements AfterViewInit {
   @ViewChild('editor', { static: true }) editorElement!: ElementRef;

@@ -1,6 +1,7 @@
 .sidebar {
     height: 100vh;
     border-right: 2px solid #efefef;
+    background-color: transparent !important;
 }
 
 .sidebar-little {
@@ -62,5 +63,15 @@ i {
 
     .sidebar-big {
         display: none !important;
+    }
+}
+
+.sidebar-little{
+    .nav-pills{
+        padding-left: 0px !important;
+        width: 100%;
+    }
+    .nav-link{
+        padding-left: 16px;
     }
 }
