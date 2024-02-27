@@ -1,0 +1,38 @@
+li.highway-car {
+    flex: 1;
+    background: #fff;
+    color: #343434;
+    margin-left: 10rem;
+    margin-right: 10rem;
+
+    img {
+        width: 2rem;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+@keyframes translatestf {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+li.highway-car {
+    animation: translateinfinite 25s linear infinite;
+    display: flex;
+
+}
+
+@keyframes translateinfinite {
+    100% {
+        transform: translateX(calc(-180px * 12));
+    }
+}

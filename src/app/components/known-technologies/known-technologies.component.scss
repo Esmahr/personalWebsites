@@ -1,0 +1,52 @@
+.technologies,
+.fixed-bottom {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 4rem;
+
+    @media (max-width:992px) {
+        padding: 0 20px 0 20px;
+    }
+
+    div.highway-slider {
+        width: 100%;
+        height: 70px;
+
+        div.highway-barrier {
+            overflow: hidden;
+            position: relative;
+        }
+
+        ul.highway-lane {
+            height: 100%;
+            width: calc(180px * 24);
+        }
+    }
+
+    #infinite div.highway-barrier {
+        background: #fff;
+        box-shadow: 0 3px 20px -6px #39A7FF;
+
+        &::before,
+        &::after {
+            content: " ";
+            position: absolute;
+            z-index: 9;
+            width: 180px;
+            height: 100%;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        &::after {
+            top: 0;
+            right: 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+}

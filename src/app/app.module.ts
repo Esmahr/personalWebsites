@@ -14,6 +14,13 @@ import { PageEditComponent } from './page-edit/page-edit.component';
 import { ThemeEditComponent } from './theme-edit/theme-edit.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { KnownTechnologiesComponent } from './components/known-technologies/known-technologies.component';
+import { KnownTechnologiesItemComponent } from './components/known-technologies/known-technologies-item/known-technologies-item.component';
+import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
+import { ProjectSummaryItemComponent } from './components/project-summary/project-summary-item/project-summary-item.component';
+import { BlogSummaryComponent } from './components/blog-summary/blog-summary.component';
+import { BlogSummaryItemComponent } from './components/blog-summary/blog-summary-item/blog-summary-item.component';
+import { BlockquoteComponent } from './components/blockquote/blockquote.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +33,14 @@ import { HttpClientModule } from '@angular/common/http';
     BlogEditComponent,
     PageEditComponent,
     ThemeEditComponent,
-    SidebarComponent
+    SidebarComponent,
+    KnownTechnologiesComponent,
+    KnownTechnologiesItemComponent,
+    ProjectSummaryComponent,
+    ProjectSummaryItemComponent,
+    BlogSummaryComponent,
+    BlogSummaryItemComponent,
+    BlockquoteComponent
   ],
   imports: [
     BrowserModule,

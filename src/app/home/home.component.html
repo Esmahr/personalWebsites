@@ -1,5 +1,5 @@
 <main>
-    <div class="design"></div>
+    <div class="design position-absolute float-end"></div>
     <app-navbar></app-navbar>
     <section class="landing" id="profile">
         <div class="container">
@@ -15,7 +15,7 @@
                         mollitia quas dolorum deserunt ad.</p>
                 </div>
                 <div class="col right d-flex">
-                    <div class="image"><img src="../../assets/profil.jpg" alt=""></div>
+                    <div class="image"><img src="../../assets/profil.jpg"></div>
                     <div class="statistic">
                         <div class="info">
                             <ul class="p-0 mb-1 text-start">
@@ -38,65 +38,28 @@
             </div>
         </div>
     </section>
-    <section class="technologies" [ngClass]="{'fixed-bottom': isTop}">
-        <div id="infinite" class="highway-slider">
-            <div class="highway-barrier">
-                <ul class="highway-lane">
-                    <li class="highway-car"><img src="../../assets/tech/java-svgrepo-com.svg" alt="">
-                        <p style="margin-bottom: .5rem;">Java</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/dart-svgrepo-com.svg" alt="">
-                        <p>Dart</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/docker-svgrepo-com.svg" alt="">
-                        <p>Docker</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/flutter-svgrepo-com.svg" alt="">
-                        <p>Flutter</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/kafka-icon-svgrepo-com.svg" alt="">
-                        <p>Kafka</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/kubernetes-svgrepo-com.svg" alt="">
-                        <p>Kubernetes</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/postgresql-svgrepo-com.svg" alt="">
-                        <p>PostgreSQL</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/postman-icon-svgrepo-com.svg" alt="">
-                        <p>Postman</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/spring-boot-svgrepo-com.svg" alt="">
-                        <p>Spring Boot</p>
-                    </li>
-                    <li class="highway-car"><img src="../../assets/tech/swagger-svgrepo-com.svg" alt="">
-                        <p>Swagger</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <section>
+        <app-known-technologies></app-known-technologies>
     </section>
-    <section class="projects mt-5">
-        <ul>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-            <li><a href="">a</a></li>
-        </ul>
+    <section class="projects mt-5 pt-5 text-center">
+        <app-project-summary></app-project-summary>
     </section>
-
+    <section class="blogs mt-5 pt-5 text-center">
+        <app-blog-summary></app-blog-summary>
+    </section>
+    <section class="my-blockquote">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+        </figure>
+        
+    </section>
+    
 </main>
+
+
+<app-blockquote></app-blockquote>
