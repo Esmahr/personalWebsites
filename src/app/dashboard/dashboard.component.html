@@ -1,4 +1,29 @@
 <body class="d-flex">
     <app-sidebar></app-sidebar>
-    <div class="content"><router-outlet></router-outlet></div>
+    <div class="d-block w-100" style="height: 100vh; overflow-y: auto;">
+        <div class="containerr">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex">
+                <div class="container-fluid date me-auto w-auto">
+                    <span class="navbar-brand"><i class="bi bi-calendar-plus ms-4 me-3"></i>20 Mart 2024</span>
+                </div>
+                <div class="right d-flex">
+                    <div class="notifcation navbar-brand"><i class="bi bi-bell"></i></div>
+                    <div class="profile navbar-brand">
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2">
+                            </a>
+                            <ul class="dropdown-menu text-small shadow">
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="content"><router-outlet></router-outlet></div>
+    </div>
 </body>

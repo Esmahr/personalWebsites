@@ -1,102 +1,90 @@
-<div class="body">
-  <h3 class="pt-5 pb-2 ps-5 m-0">Hoşgeldin Raşit<i class="bi bi-emoji-smile ms-2"></i></h3>
-  <p class="pb-2 ps-5 m-0">seni tekrardan görmek çok güzel</p>
-  <div class="container mt-5 mb-5">
-    <div class="row g-3 mt-1 ps-2 pe-2">
-      <div class="col-md-12 col-lg-12">
-        <form class="needs-validation" novalidate="">
-          <div class="row g-3">
-            <div class="col-sm-4 mb-3">
-              <label for="firstName" class="form-label">Ad</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Zorunlu alan!
-              </div>
-            </div>
-
-            <div class="col-sm-4 mb-3">
-              <label for="lastName" class="form-label">Soyad</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Zorunlu alan!
-              </div>
-            </div>
-
-            <div class="col-sm-4 mb-3">
-              <label for="firstName" class="form-label">Deneyim</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Zorunlu alan!
-              </div>
-            </div>
-
-            <div class="col-sm-4 mb-3">
-              <label for="username" class="form-label">Github Kullanıcı Adı</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="github-username" placeholder="Username" required="">
-                <div class="invalid-feedback">
-                  Zorunlu alan!
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-4 mb-3">
-              <label for="username" class="form-label">Medium Kullanıcı Adı</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="medium-username" placeholder="Username" required="">
-                <div class="invalid-feedback">
-                  Zorunlu alan!
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-4 mb-3">
-              <label for="username" class="form-label">Youtube Kullanıcı Adı</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="medium-username" placeholder="Username" required="">
-                <div class="invalid-feedback">
-                  Zorunlu alan!
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-612mb-3">
-              <label for="email" class="form-label">E-mail </label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
-              <div class="invalid-feedback">
-                Zorunlu alan!
-              </div>
-              <div class="form-check mt-2">
-                <input type="checkbox" class="form-check-input" id="same-address">
-                <label class="form-check-label" for="same-address">Mail adresim görünsün</label>
-              </div>
-            </div>
-
-            <div class="col-12 mb-3">
-              <label for="address" class="form-label">Açıklama</label>
-              <div class="form-control" id="description" #editor></div>
-              <button type="button" (click)="showEditorData()">show</button>
-              <div class="invalid-feedback">
-                Zorunlu alan!
-              </div>
-            </div>
-            <div class="col-sm-6 mb-3">
-              <label for="formFile" class="form-label">Profil Resmi</label>
-              <input class="form-control image" type="file" id="formFile" (change)="onFileSelected($event)">
-            </div>
-            <div class="col-sm-6 mb-3 mt-2" *ngIf="selectedFile">
-              <label for="formFile" class="form-label">Seçilen Dosya:</label>
-              <div><img [src]="imageUrl" alt="Seçilen Resim"></div>
-            </div>
-
+<main>
+  <div class="card mb-0">
+    <form class="needs-validation" novalidate="">
+      <div class="grid-group">
+        <div class="main-input-group">
+          <label for="firstName" class="form-label">Ad</label>
+          <input type="text" class="form-control" id="firstName" value="">
+          <div class="invalid-feedback">
+            Zorunlu alan!
           </div>
-
-          <button class="w-30 btn btn-primary btn-snmall mb-5" type="submit">Bilgilerimi Kaydet</button>
-        </form>
+        </div>
+        <div class="main-input-group">
+          <label for="lastName" class="form-label">Soyad</label>
+          <input type="text" class="form-control" id="lastName" value="">
+          <div class="invalid-feedback">
+            Zorunlu alan!
+          </div>
+        </div>
+        <div class="main-input-group">
+          <label for="experience" class="form-label">Deneyim</label>
+          <input type="number" class="form-control" id="experience" value="">
+          <div class="invalid-feedback">
+            Zorunlu alan!
+          </div>
+        </div>
+        <div class="main-input-group">
+          <label for="github-username" class="form-label">Github Kullanıcı Adı</label>
+          <div class="input-group has-validation d-flex">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="github-username" value="">
+            <div class="invalid-feedback">
+              Zorunlu alan!
+            </div>
+          </div>
+        </div>
+        <div class="main-input-group">
+          <label for="medium-username" class="form-label">Medium Kullanıcı Adı</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="medium-username" value="">
+            <div class="invalid-feedback">
+              Zorunlu alan!
+            </div>
+          </div>
+        </div>
+        <div class="main-input-group">
+          <label for="youtube-username" class="form-label">Youtube Kullanıcı Adı</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="youtube-username" value="">
+            <div class="invalid-feedback">
+              Zorunlu alan!
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="main-input-group">
+        <label for="email" class="form-label">E-mail </label>
+        <input type="email" class="form-control" id="email" value="">
+        <div class="invalid-feedback">
+          Zorunlu alan!
+        </div>
+      </div>
+      <div class="form-check mt-2">
+        <input type="checkbox" class="form-check-input" id="mail">
+        <label class="form-check-label" for="mail">Mail adresim görünsün</label>
+      </div>
+      <div class="main-input-group">
+        <label for="description" class="form-label">Açıklama</label>
+        <div class="form-control" id="description" #editor></div>
+        <div class="invalid-feedback">
+          Zorunlu alan!
+        </div>
+        <button type="button" class="btn btn-sm btn-primary float-end mt-3 mb-3" (click)="showEditorData()">konsola
+          yazdır</button>
+      </div>
+      <div class="img-group">
+        <div class="main-input-group upload-img">
+          <label for="formFile" class="form-label">Profil Resmi</label>
+          <input class="form-control image" type="file" id="formFile" (change)="onFileSelected($event)">
+        </div>
+        <div class="main-input-group view-img" *ngIf="selectedFile">
+          <label for="formFile" class="form-label">Seçilen Dosya:</label>
+          <div><img class="selected-img" [src]="imageUrl" alt="Seçilen Resim"></div>
+        </div>
+      </div>
+    </form>
   </div>
-</div>
+ <div class="text-center"> <button class="w-30 btn btn-primary btn-sm mb-5 mt-1" type="submit">Bilgilerimi Kaydet</button></div>
+</main>

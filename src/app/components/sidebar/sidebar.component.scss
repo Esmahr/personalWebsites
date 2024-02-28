@@ -1,5 +1,7 @@
 .sidebar {
     height: 100vh;
+    border-right: 2px solid #efefef;
+    background-color: transparent !important;
 }
 
 .sidebar-little {
@@ -13,7 +15,7 @@
 
 .nav-link {
     padding: 6px 10px;
-    line-height: 30px;
+    line-height: 35px;
     text-decoration: none;
     color: #3c4e71;
     display: flex;
@@ -22,8 +24,13 @@
 }
 
 .nav-link.active {
-    color: #3c4e71;
-    background-color: #d0e3ff;
+    color: #fff !important;
+    background-color: #2D9596;
+}
+
+.nav-link{
+    font-size: 18px;
+    font-weight: 400;
 }
 
 i {
@@ -56,5 +63,15 @@ i {
 
     .sidebar-big {
         display: none !important;
+    }
+}
+
+.sidebar-little{
+    .nav-pills{
+        padding-left: 0px !important;
+        width: 100%;
+    }
+    .nav-link{
+        padding-left: 16px;
     }
 }

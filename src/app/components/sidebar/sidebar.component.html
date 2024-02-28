@@ -1,11 +1,10 @@
 <div class="sidebar d-flex">
     <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary sidebar-big">
         <a href="#"
-            class="d-flex pt-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none sidebar-title">
+            class="d-flex pt-3 mb-md-0 me-md-auto pb-5 link-body-emphasis text-decoration-none sidebar-title">
             <i class="bi bi-envelope-paper-heart mt-1"></i>
             <span class="fs-4">Sidebar</span>
         </a>
-        <hr class="mt-2">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
                 <a routerLink="abouth" routerLinkActive="active" class="nav-link link-body-emphasis">
@@ -38,26 +37,9 @@
                 </a>
             </li>
         </ul>
-        <hr>
-        <div class="dropdown pb-3">
-            <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                <strong class="profile-width">Muhammed Raşit Eşdemir</strong>
-            </a>
-            <ul class="dropdown-menu text-small shadow">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-            </ul>
-        </div>
     </div>
 
-    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary sidebar-little" style="width: 4.5rem;">
+    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary sidebar-little" style="width: 3.2rem;">
         <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
             data-bs-placement="right" data-bs-original-title="Icon-only">
             <svg class="bi pe-none" width="40" height="32">
@@ -65,28 +47,28 @@
             </svg>
             <span class="visually-hidden">Icon-only</span>
         </a>
-        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <ul class=" nav nav-pills nav-flush flex-column mb-auto text-center">
             <li class="nav-item">
-                <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page"
+                <a routerLink="abouth" routerLinkActive="active" class="nav-link py-3 border-bottom rounded-0" aria-current="page"
                     data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home"
                     data-bs-original-title="Home">
                     <i class="bi bi-house"width="24" height="24"></i>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
+                <a routerLink="theme" routerLinkActive="active"  class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
                     data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
                     <i class="bi bi-speedometer2"></i>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
+                <a routerLink="blog" routerLinkActive="active" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
                     data-bs-placement="right" aria-label="Blog Yazılarım" data-bs-original-title="Blog Yazılarım">
                     <i class="bi bi-table"></i>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
+                <a routerLink="project" routerLinkActive="active" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
                     data-bs-placement="right" aria-label="Projelerim" data-bs-original-title="Products">
                      <i class="bi bi-grid"></i>
                 </a>
@@ -98,21 +80,5 @@
                 </a>
             </li>
         </ul>
-        <div class="dropdown border-top">
-            <a href="#"
-                class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
-            </a>
-            <ul class="dropdown-menu text-small shadow">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-            </ul>
-        </div>
     </div>
 </div>

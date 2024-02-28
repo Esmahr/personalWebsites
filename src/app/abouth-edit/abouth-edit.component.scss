@@ -1,0 +1,86 @@
+.main-input-group {
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.needs-validation {
+    padding: 1rem;
+}
+
+.grid-group {
+    display: grid;
+    grid-gap: 1rem;
+
+    @media (min-width: 1460px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (min-width: 1000px) and (max-width: 1460px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 999px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    padding: 1.5rem;
+    margin: 3rem;
+
+    @media (max-width:582px) {
+        padding: .5rem;
+        margin: 1.5rem;
+        border: none;
+
+        label {
+            font-size: 14px;
+        }
+
+        input {
+            font-size: 12px;
+        }
+
+        .input-group-text {
+            font-size: 12px;
+        }
+
+    }
+
+    @media (max-width:498px) {
+        padding: .5rem;
+        margin: .5rem;
+
+        label {
+            white-space: nowrap;
+        }
+    }
+
+    @media (max-width:420px) {
+        padding: 0rem;
+        margin: 0rem;
+    }
+}
+
+.selected-img{
+    padding: 1rem;
+    width: 90%;
+}
+
+.img-group{
+    display: flex;
+    .upload-img, .view-img{
+        width: 50%;
+    }
+    @media (max-width:1140px) {
+        display: block;
+        .upload-img, .view-img{
+            width: 100%;
+        }
+    }
+}

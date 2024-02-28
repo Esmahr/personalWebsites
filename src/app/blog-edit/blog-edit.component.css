@@ -1,0 +1,68 @@
+.accordion-body img {
+    width: 90%;  
+    box-shadow: 0 0 5px black;
+}
+
+.main-table{
+    margin-top: 1rem;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(101,126,174,.25);
+    border-radius: 9px;
+    height: 80vh;
+    overflow-y: auto;
+}
+.main-th {
+    width: 1rem;
+
+}
+th, .main-th, .main-td{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.main-td {
+    width: 20rem;
+
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+
+}
+
+.accordion-button {
+    padding: 0rem;
+    font-size: 17px;
+}
+.accordion-collapse {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.accordion-item {
+    border: none;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: #3c4e71;
+    border-color: #3c4e71;
+}
+
+.modal-dialog {
+    max-width: 80%;
+}
