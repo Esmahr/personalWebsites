@@ -21,6 +21,7 @@ import { ProjectSummaryItemComponent } from './components/project-summary/projec
 import { BlogSummaryComponent } from './components/blog-summary/blog-summary.component';
 import { BlogSummaryItemComponent } from './components/blog-summary/blog-summary-item/blog-summary-item.component';
 import { BlockquoteComponent } from './components/blockquote/blockquote.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BlockquoteComponent } from './components/blockquote/blockquote.componen
     ProjectSummaryItemComponent,
     BlogSummaryComponent,
     BlogSummaryItemComponent,
-    BlockquoteComponent
+    BlockquoteComponent,
+    LoginpageComponent
   ],
   imports: [
     BrowserModule,

@@ -7,9 +7,11 @@ import { BlogEditComponent } from './blog-edit/blog-edit.component';
 import { ProjectEditComponent } from './project-edit/project-edit.component';
 import { ThemeEditComponent } from './theme-edit/theme-edit.component';
 import { PageEditComponent } from './page-edit/page-edit.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
+  { path: 'login', component: LoginpageComponent, data: { title: 'Giriş Yap' } },
   {
     path: 'admin',
     component: DashboardComponent,

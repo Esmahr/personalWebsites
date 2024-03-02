@@ -8,3 +8,31 @@ ul{
     list-style: none;
     justify-content: space-between;
 }
+
+.carousel{
+    width: 55%;
+}
+
+.last-blog{
+    width: 45%;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 200px; /* 3 öğenin toplam yüksekliği */
+    position: relative;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: transform 2s, opacity 0.5s;
+  }
+  
+  /* Özel stiller ve animasyonlar */
+  

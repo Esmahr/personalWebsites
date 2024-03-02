@@ -9,9 +9,9 @@
     overflow: hidden; /* Fazla içeriği gizler */
     text-overflow: ellipsis; /* Taşan metni ... ile gösterir */
     display: -webkit-box;
-    -webkit-line-clamp: 6; /* Kaç satırın gösterileceğini belirler */
+    -webkit-line-clamp: 4; /* Kaç satırın gösterileceğini belirler */
     -webkit-box-orient: vertical;
-    height: 6rem;
+    height: 4rem;
 }
 
 .card-title h6 {
