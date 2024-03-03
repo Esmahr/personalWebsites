@@ -22,6 +22,7 @@ import { BlogSummaryComponent } from './components/blog-summary/blog-summary.com
 import { BlogSummaryItemComponent } from './components/blog-summary/blog-summary-item/blog-summary-item.component';
 import { BlockquoteComponent } from './components/blockquote/blockquote.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

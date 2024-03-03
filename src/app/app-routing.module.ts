@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
   { path: 'login', component: LoginpageComponent, data: { title: 'Giriş Yap' } },
   {
-    path: 'admin',
+    path: 'dashboard',
     component: DashboardComponent,
     children: [
       { path: '', redirectTo: 'abouth', pathMatch: 'full' }, // Varsayılan sayfa

@@ -1,21 +1,28 @@
 <main>
-    <div class="card p-5 m-auto text-center">
-        <h2>Hoş Geldiniz</h2>
-        <form class="mt-4 mb-4">
-            <div class="mb-3 text-start">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3 text-start">
-              <label for="exampleInputPassword1" class="form-label">Şifre</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check text-start">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Giriş bilgilerimi hatırla</label>
-            </div>
-            <button type="submit" class="btn">Giriş Yap</button>
-          </form>
-          <p>Üye olmak için bizimle <a href="#">iletişime geçin.</a></p>
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5 mt-3">
+      <div class="col-lg-7 text-left text-lg-start">
+        <h3 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h3>
+        <p class="col-lg-10 fs-6">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-4">
+        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" (ngSubmit)="login()">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="username" name="username" placeholder="username" [(ngModel)]="username" required>
+            <label for="username">Kullanıcı Adı</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" name="password" placeholder="********" [(ngModel)]="password" required>
+            <label for="password">Şifre</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me" name="rememberMe" [(ngModel)]="rememberMe"> Giriş bilgilerimi hatırla
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Giriş Yap</button>
+        </form>
+      </div>
     </div>
+  </div>
 </main>

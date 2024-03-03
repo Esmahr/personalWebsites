@@ -49,6 +49,8 @@ import ChangeCase from 'editorjs-change-case';
 import ColorPlugin from 'editorjs-text-color-plugin';
 // @ts-ignore
 import AlignmentTuneTool from 'editorjs-text-alignment-blocktune';
+import { UserService } from '../services/User/user.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-abouth-edit',
@@ -59,10 +61,23 @@ export class AbouthEditComponent implements AfterViewInit {
   @ViewChild('editor', { static: true }) editorElement!: ElementRef;
 
   private editor: EditorJS | undefined;
-
-  constructor(private descriptionService: DescriptionService) { }
   selectedFile: File | null = null;
   imageUrl: any = null;
+  userInfo: any;
+  data: any
+  constructor(private descriptionService: DescriptionService, private userService: UserService) { }
+
+  ngOnInit() {
+    this.userService.getCurrentUser().subscribe(
+      userInfo => {
+        this.userInfo = userInfo.data; // Kullanıcı bilgilerini saklayın
+        this.imageUrl = this.userInfo.profilePhotoLink;
+      },
+      error => {
+        console.error('Error fetching user info:', error);
+      }
+    );
+  }
 
   ngAfterViewInit(): void {
     this.initializeEditor();
@@ -205,4 +220,12 @@ export class AbouthEditComponent implements AfterViewInit {
       };
     }
   }
+  form = new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    username: new FormControl(),
+    mail: new FormControl(),
+    password: new FormControl()
+  });
+
 }

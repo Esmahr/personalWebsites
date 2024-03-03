@@ -1,90 +1,181 @@
-<main>
-  <div class="card mb-0">
-    <form class="needs-validation" novalidate="">
-      <div class="grid-group">
-        <div class="main-input-group">
-          <label for="firstName" class="form-label">Ad</label>
-          <input type="text" class="form-control" id="firstName" value="">
-          <div class="invalid-feedback">
-            Zorunlu alan!
+<form class="needs-validation mt-4" novalidate>
+  <div class="container">
+    <div class="row">
+      <div class="text-end"> <button class="w-30 btn btn-primary btn-sm mb-2 me-2" type="submit"> Değişiklikleri
+          Kaydet</button></div>
+      <div class="col-md-3 mb-3">
+        <div class="profile-img-group p-3">
+          <img *ngIf="imageUrl; else defaultImage" [src]="imageUrl" alt="Profil Resmi">
+          <ng-template #defaultImage>
+            <img [src]="userInfo?.profilePhotoLink" alt="Varsayılan Profil Resmi">
+          </ng-template>
+          <div class="upload-img text-center">
+            <label for="formFile" class="form-label mt-4"><b>Profil Resmini Değiştir</b></label>
+            <input class="form-control image" type="file" id="formFile" (change)="onFileSelected($event)">
           </div>
         </div>
-        <div class="main-input-group">
-          <label for="lastName" class="form-label">Soyad</label>
-          <input type="text" class="form-control" id="lastName" value="">
-          <div class="invalid-feedback">
-            Zorunlu alan!
-          </div>
-        </div>
-        <div class="main-input-group">
-          <label for="experience" class="form-label">Deneyim</label>
-          <input type="number" class="form-control" id="experience" value="">
-          <div class="invalid-feedback">
-            Zorunlu alan!
-          </div>
-        </div>
-        <div class="main-input-group">
-          <label for="github-username" class="form-label">Github Kullanıcı Adı</label>
-          <div class="input-group has-validation d-flex">
-            <span class="input-group-text">@</span>
-            <input type="text" class="form-control" id="github-username" value="">
-            <div class="invalid-feedback">
-              Zorunlu alan!
+      </div>
+
+      <div class="col-md-9">
+        <div class="container p-3">
+          <div class="row">
+            <h4 class="mt-3">Kişisel Bilgiler</h4>
+            <div class="col-md-6">
+              <div class="main-input-group">
+                <label for="firstName" class="form-label">Ad</label>
+                <input type="text" class="form-control" id="firstName" [(ngModel)]="userInfo.firstName" name="firstName" required>
+                <div class="invalid-feedback">
+                  Zorunlu alan!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main-input-group">
+                <label for="lastName" class="form-label">Soyad</label>
+                <input type="text" class="form-control" id="lastName" [(ngModel)]="userInfo.lastName" name="lastName"
+                  required>
+                <div class="invalid-feedback">
+                  Zorunlu alan!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main-input-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" [(ngModel)]="userInfo.email" name="email" required>
+                <div class="invalid-feedback">
+                  Zorunlu alan!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="main-input-group">
+                <label for="experience" class="form-label">Deneyim</label>
+                <input type="number" class="form-control" id="experience" [(ngModel)]="userInfo.email" name="experience"
+                  required>
+                <div class="invalid-feedback">
+                  Zorunlu alan!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="main-input-group">
+                <label for="gender" class="form-label">Cinsiyet</label>
+                <input type="text" class="form-control" id="gender" [(ngModel)]="userInfo.gender" name="gender"
+                  required>
+                <div class="invalid-feedback">
+                  Zorunlu alan!
+                </div>
+              </div>
+            </div>
+            <h4 class="mt-3">Sosyal Bilgiler</h4>
+            <div class="col-md-6">
+              <div class="main-input-group">
+                <label for="githubUsername" class="form-label">Github Kullanıcı Adı</label>
+                <div class="input-group has-validation d-flex">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="githubUsername" [(ngModel)]="userInfo.githubUsername"
+                    name="githubUsername" required>
+                  <div class="invalid-feedback">
+                    Zorunlu alan!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main-input-group">
+                <label for="mediumUsername" class="form-label">Medium Kullanıcı Adı</label>
+                <div class="input-group has-validation d-flex">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="mediumUsername" [(ngModel)]="userInfo.githubUsername"
+                    name="mediumUsername" required>
+                  <div class="invalid-feedback">
+                    Zorunlu alan!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main-input-group">
+                <label for="youtubeUsername" class="form-label">Youtube Kullanıcı Adı</label>
+                <div class="input-group has-validation d-flex">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="youtubeUsername" [(ngModel)]="userInfo.githubUsername"
+                    name="youtubeUsername" required>
+                  <div class="invalid-feedback">
+                    Zorunlu alan!
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="main-input-group">
-          <label for="medium-username" class="form-label">Medium Kullanıcı Adı</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text">@</span>
-            <input type="text" class="form-control" id="medium-username" value="">
-            <div class="invalid-feedback">
-              Zorunlu alan!
-            </div>
-          </div>
-        </div>
-        <div class="main-input-group">
-          <label for="youtube-username" class="form-label">Youtube Kullanıcı Adı</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text">@</span>
-            <input type="text" class="form-control" id="youtube-username" value="">
-            <div class="invalid-feedback">
-              Zorunlu alan!
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="main-input-group">
-        <label for="email" class="form-label">E-mail </label>
-        <input type="email" class="form-control" id="email" value="">
-        <div class="invalid-feedback">
-          Zorunlu alan!
-        </div>
-      </div>
-      <div class="form-check mt-2">
-        <input type="checkbox" class="form-check-input" id="mail">
-        <label class="form-check-label" for="mail">Mail adresim görünsün</label>
-      </div>
-      <div class="main-input-group">
-        <label for="description" class="form-label">Açıklama</label>
-        <div class="form-control" id="description" #editor></div>
-        <div class="invalid-feedback">
-          Zorunlu alan!
-        </div>
-        <button type="button" class="btn btn-sm btn-primary float-end mt-3 mb-3" (click)="showEditorData()">konsola
-          yazdır</button>
-      </div>
-      <div class="img-group">
-        <div class="main-input-group upload-img">
-          <label for="formFile" class="form-label">Profil Resmi</label>
-          <input class="form-control image" type="file" id="formFile" (change)="onFileSelected($event)">
-        </div>
-        <div class="main-input-group view-img" *ngIf="selectedFile">
-          <label for="formFile" class="form-label">Seçilen Dosya:</label>
-          <div><img class="selected-img" [src]="imageUrl" alt="Seçilen Resim"></div>
-        </div>
-      </div>
-    </form>
+    </div>
   </div>
- <div class="text-center"> <button class="w-30 btn btn-primary btn-sm mb-5 mt-1" type="submit">Bilgilerimi Kaydet</button></div>
-</main>
+</form>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 p-3">
+      <div class="about-area p-3">
+        <h4 class="mt-3">Hakkımda</h4>
+        <div class="text-end abouth-text-add"> <button class="btn btn-primary btn-sm" type="submit"
+            data-bs-toggle="modal" data-bs-target="#staticBackdrop">Yeni
+            Ekle</button></div>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Hakkımda</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="form-control" id="description" #editor></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary mt-0" data-bs-dismiss="modal"
+                  aria-label="Close">İptal</button>
+                <button type="button" class="btn btn-primary mt-0" (click)="showEditorData()">Kaydet</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="p-0">
+          <li>
+            <div class="check-area">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sunt ex eaque molestias facilis
+              sapiente, quisquam repellat debitis quaerat. Possimus, fugiat ullam? Quasi officiis fugiat expedita
+              dignissimos. Velit, minus a?</div>
+            <div>aaaa</div>
+            <div>aaaa</div>
+          </li>
+          <li>
+            <div class="check-area">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sunt ex eaque molestias facilis
+              sapiente, quisquam repellat debitis quaerat. Possimus, fugiat ullam? Quasi officiis fugiat expedita
+              dignissimos. Velit, minus a?</div>
+            <div>aaaa</div>
+            <div>aaaa</div>
+          </li>
+          <li>
+            <div class="check-area">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sunt ex eaque molestias facilis
+              sapiente, quisquam repellat debitis quaerat. Possimus, fugiat ullam? Quasi officiis fugiat expedita
+              dignissimos. Velit, minus a?</div>
+            <div>aaaa</div>
+            <div>aaaa</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

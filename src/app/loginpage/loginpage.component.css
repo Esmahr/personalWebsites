@@ -3,20 +3,3 @@ main{
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(143,89,197,1) 300%);
     height: 100vh;
 }
-
-.card{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-button{
-    background-color: rgb(172, 12, 172);
-    color: white;
-}
-button:hover{
-    background-color: rgb(172, 12, 172);
-    color: white;
-}
