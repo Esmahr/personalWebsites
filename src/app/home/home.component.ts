@@ -14,4 +14,5 @@ export class HomeComponent {
     const threshold = 50;
     this.isTop = window.scrollY < threshold;
   }
+
 }

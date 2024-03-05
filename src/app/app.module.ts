@@ -17,12 +17,27 @@ import { HttpClientModule } from '@angular/common/http';
 import { KnownTechnologiesComponent } from './components/known-technologies/known-technologies.component';
 import { KnownTechnologiesItemComponent } from './components/known-technologies/known-technologies-item/known-technologies-item.component';
 import { ProjectSummaryComponent } from './components/project-summary/project-summary.component';
-import { ProjectSummaryItemComponent } from './components/project-summary/project-summary-item/project-summary-item.component';
 import { BlogSummaryComponent } from './components/blog-summary/blog-summary.component';
 import { BlogSummaryItemComponent } from './components/blog-summary/blog-summary-item/blog-summary-item.component';
 import { BlockquoteComponent } from './components/blockquote/blockquote.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { FormsModule } from '@angular/forms';
+
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule, } from '@angular/material/table';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +54,6 @@ import { FormsModule } from '@angular/forms';
     KnownTechnologiesComponent,
     KnownTechnologiesItemComponent,
     ProjectSummaryComponent,
-    ProjectSummaryItemComponent,
     BlogSummaryComponent,
     BlogSummaryItemComponent,
     BlockquoteComponent,
@@ -50,7 +64,22 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatTableModule,
+    MatRadioModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatMenuModule,
+    MatProgressSpinnerModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
