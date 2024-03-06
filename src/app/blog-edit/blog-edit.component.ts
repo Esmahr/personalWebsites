@@ -5,8 +5,9 @@ import { DescriptionService } from '../services/description.service';
 @Component({
   selector: 'app-blog-edit',
   templateUrl: './blog-edit.component.html',
-  styleUrls: ['./blog-edit.component.css']
+  styleUrls: ['./blog-edit.component.css'],
 })
+
 export class BlogEditComponent implements AfterViewInit {
   @ViewChild('editor', { static: true }) editorElement!: ElementRef;
 

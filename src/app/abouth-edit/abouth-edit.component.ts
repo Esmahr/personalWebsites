@@ -51,6 +51,16 @@ import ColorPlugin from 'editorjs-text-color-plugin';
 import AlignmentTuneTool from 'editorjs-text-alignment-blocktune';
 import { UserService } from '../services/User/user.service';
 import { FormControl, FormGroup } from '@angular/forms';
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  symbol: string;
+}
+const ELEMENT_DATA: PeriodicElement[] = [
+  { position: 1, name: 'Hydrogen',  symbol: 'H' },
+  { position: 2, name: 'Helium',  symbol: 'He' },
+  { position: 3, name: 'Lithium',  symbol: 'Li' }
+];
 
 @Component({
   selector: 'app-abouth-edit',
@@ -66,6 +76,9 @@ export class AbouthEditComponent implements AfterViewInit {
   userInfo: any;
   data: any
   constructor(private descriptionService: DescriptionService, private userService: UserService) { }
+
+  displayedColumns: string[] = ['position', 'name', 'symbol'];
+  dataSource = ELEMENT_DATA;
 
   ngOnInit() {
     this.userService.getCurrentUser().subscribe(
