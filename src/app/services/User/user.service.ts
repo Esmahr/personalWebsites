@@ -7,13 +7,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private usersUrl = 'http://87.248.157.49:9091/api/v3/users'; // API endpoint
-  private currentUserSubject = new BehaviorSubject<any>(null); // Başlangıç değeri olarak null atanmış bir BehaviorSubject
-
+  private usersUrl = 'http://87.248.157.49:9091/api/v3/users'; 
+  private currentUserSubject = new BehaviorSubject<any>(null); 
   constructor(private http: HttpClient) { }
 
   getUserInfo(token: string): Observable<any> {
-    // HTTP headers oluşturun
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -23,11 +21,18 @@ export class UserService {
     return this.http.get(this.usersUrl, httpOptions);
   }
 
+  updateUser(token: string, userUpdateRequest: any) {
+    const headers = { 'Authorization': `Bearer ${token}`,
+    'Content-Type': 'application/json' };
+    return this.http.put(this.usersUrl, userUpdateRequest, { headers });
+  }
+
   setCurrentUser(userInfo: any): void {
-    this.currentUserSubject.next(userInfo); // Kullanıcı bilgisini güncelle
+    this.currentUserSubject.next(userInfo); 
   }
 
   getCurrentUser(): Observable<any> {
-    return this.currentUserSubject.asObservable(); // Mevcut kullanıcı bilgisini bir Observable olarak döndür
+    return this.currentUserSubject.asObservable(); 
   }
+
 }

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./theme-edit.component.css']
 })
 export class ThemeEditComponent {
-  constructor() { }
+  list = [0, 1, 2];
+  items = [0, 1, 2, 3, 4];
+
+  getDynamicId(i: number): string {
+    return `myInput${i}`;
+  }
 }

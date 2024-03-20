@@ -1,0 +1,91 @@
+.sidebarMenu{
+    background-color: #088afe;
+    color: #fff;
+    width: auto;
+    height: 100vh;
+  }
+  .genisSideBar{
+    width: 160px;
+    transition: .40s;
+  }
+  .darSideBar{
+    width: 60px;
+    transition: .40s;
+  }
+  
+  
+  .logo{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  line-height: normal;
+  padding: 4px 8px;
+  }
+  .userFoto{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #088afe;
+  background-color: #fff;
+  line-height: normal;
+  }
+  .nav li a{
+    color: #fff !important;
+    font-size: 14px;
+    
+  }
+  .navIcon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    font-weight: bold;
+    background-color: #ffbb00;
+    color: #fff;
+    margin-right: 6px;
+    border-radius: 4px;
+  }
+  
+  .userFotoGenis{
+    width: 60px;
+    height: 60px;
+    border-radius: 38px;
+    font-size: 20px;
+    transition: .40s;
+  }
+  .userFotoDar{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 16px;
+    transition: .40s;
+  }
+  
+  .userNameGenis{
+    display: block;
+  }
+  .userNameDar{
+    display: none;
+  }
+  
+  .navLinkGenis{
+    display: inline-block;
+    visibility: visible;
+  }
+  .navLinkDar{
+    display: none;
+    visibility: hidden;
+  }
+  
+  .genisSideBarAlt{
+    width: 160px;
+  }
+  .darSideBarAlt{
+    width: 60px;
+  }
+  

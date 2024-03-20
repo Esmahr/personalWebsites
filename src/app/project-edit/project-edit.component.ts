@@ -56,9 +56,9 @@ export class ProjectEditComponent implements AfterViewInit {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
   }
-  isLoading = false; // Spinner'ın başlangıçta gizli olması için false
+  isLoading = false;
 
   toggleLoading() {
-    this.isLoading = !this.isLoading; // Mevcut durumun tersini al
+    this.isLoading = !this.isLoading;
   }
 }

@@ -1,29 +1,7 @@
-.container,
-.body {
-    background-color: #f6f6f7;
-    height: 100vh;
-}
-
-.row {
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(101, 126, 174, .25);
-    border-radius: 8px;
-}
 
 .clipboard, input {
     background-color: white;
     border: 1px solid #e1e1e1;
-}
-
-.form-control:focus {
-    border-color: #efefef; 
-    box-shadow: none;
-}
-
-button{
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
 }
 
 #copyNotification {
@@ -36,9 +14,9 @@ button{
     display: none;
 }
 
-.modal-dialog {
-    max-width: 80%;
+button{
+    margin-left: 1rem;
 }
-form{
-    border: none !important;
+input{
+    margin-right: 1rem;
 }

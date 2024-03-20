@@ -20,13 +20,12 @@ export class BlogSummaryItemComponent {
      const svg3 = this.createHeartSvg('heart-pop three');
     const svg4 = this.createHeartSvg('heart-pop four');
 
-    // SVG'leri heartsContainer'a ekle
+   
     this.renderer.appendChild(this.heartsContainer.nativeElement, svg1);
     this.renderer.appendChild(this.heartsContainer.nativeElement, svg2);
     this.renderer.appendChild(this.heartsContainer.nativeElement, svg3);
     this.renderer.appendChild(this.heartsContainer.nativeElement, svg4);
 
-    // Belirli bir süre sonra SVG'leri kaldır
     setTimeout(() => {
       this.renderer.removeChild(this.heartsContainer.nativeElement, svg1);
       this.renderer.removeChild(this.heartsContainer.nativeElement, svg2);
@@ -35,7 +34,6 @@ export class BlogSummaryItemComponent {
     }, 3000);
   }
 
-  // Kalp SVG'si oluşturmak için yardımcı metod
   private createHeartSvg(className: string): SVGElement {
     const svg = this.renderer.createElement('svg', 'svg');
     this.renderer.setAttribute(svg, 'class', `heart ${className}`);

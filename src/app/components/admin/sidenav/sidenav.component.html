@@ -1,0 +1,43 @@
+<div class="sidebarMenu" [ngClass]="status ? 'darSideBar' : 'genisSideBar'">
+    <div class="d-flex">
+        <h4 class="pt-3" [ngClass]="status ? 'none' : 'block'">Raşit Eşdemir</h4>
+        <div class=" d-flex justify-content-center" [ngClass]="status ? 'darSideBarAlt' : 'genisSideBarAlt'">
+            <button (click)="clickEvent()"><img src="../../../assets/dashboard.png" alt=""></button>
+        </div>
+    </div>
+    <div class="sideBarOrta mt-5">
+        <ul class="nav flex-column mt-3">
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="abouth" routerLinkActive="active">
+                    <span class="navIcon"><i class="bi bi-house"></i></span>
+                    <span
+                        [ngClass]="statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">İstatistikler</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"routerLink="theme" routerLinkActive="active">
+                    <span class="navIcon"><i class="bi bi-speedometer2"></i></span>
+                    <span [ngClass]="statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">Satışlar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="blog" routerLinkActive="active" >
+                    <span class="navIcon"> <i class="bi bi-table"></i></span>
+                    <span [ngClass]="statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">Alışlar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="project" routerLinkActive="active" >
+                    <span class="navIcon"><i class="bi bi-grid"></i></span>
+                    <span [ngClass]="statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">Alışlar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="page" routerLinkActive="active" >
+                    <span class="navIcon"> <i class="bi bi-person-circle"></i></span>
+                    <span [ngClass]="statusLink ? 'navLinkDar' : 'navLinkGenis animated fadeInRight'">Alışlar</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

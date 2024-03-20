@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserService } from '../services/User/user.service';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent implements OnInit {
   userInfo: any;
   profilePhotoLink: string = '';
   formattedDate: string;
-
+  
   constructor(private userService: UserService) {
     this.formattedDate = this.getFormattedDate();
   }
@@ -20,14 +22,13 @@ export class DashboardComponent implements OnInit {
   }
 
   getUserInfo() {
-    const token = localStorage.getItem('token'); // Token'ı yerel depolamadan alın
+    const token = localStorage.getItem('token');
     if (token) {
       this.userService.getUserInfo(token).subscribe(
         data => {
-          this.userInfo = data; // Kullanıcı bilgilerini saklayın
+          this.userInfo = data;
           this.userService.setCurrentUser(this.userInfo);
-          this.profilePhotoLink = data.data.profilePhotoLink; // Profil fotoğrafı linkini sakla
-          console.log(this.userInfo)
+          this.profilePhotoLink = data.data.profilePhotoLink;
         },
         error => {
           console.error('Error fetching user info:', error);

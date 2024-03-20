@@ -39,10 +39,8 @@ export class LoginpageComponent {
   
 
   logout() {
-    // Çıkış işlemleri ...
     localStorage.removeItem('rememberedUsername');
     localStorage.removeItem('token');
-    // Kullanıcıyı giriş sayfasına yönlendirme...
   }
 
   loadRememberedUser() {

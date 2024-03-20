@@ -1,213 +1,23 @@
-<div class="body" width="100">
-    <div class="container p-5">
-        <button type="button" class="btn btn-sm btn-primary float-end" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop">
-            Yeni Ekle</button>
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Yeni Tema</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row g-3 needs-validation p-5" novalidate>
-                            <div class="col-md-12">
-                                <label for="validationCustom01" class="form-label">Tema Adı</label>
-                                <input type="text" class="form-control" id="validationCustom01" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom01" class="form-label">Renk 1:</label>
-                                <input type="text" class="form-control" id="validationCustom01"required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom02" class="form-label">Renk 2:</label>
-                                <input type="text" class="form-control" id="validationCustom02" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom02" class="form-label">Renk 3:</label>
-                                <input type="text" class="form-control" id="validationCustom02" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom01" class="form-label">Renk 4:</label>
-                                <input type="text" class="form-control" id="validationCustom01" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom02" class="form-label">Renk 5:</label>
-                                <input type="text" class="form-control" id="validationCustom02" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom02" class="form-label">Renk 6:</label>
-                                <input type="text" class="form-control" id="validationCustom02" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary mt-0" data-bs-dismiss="modal">İptal</button>
-                        <button type="submit" class="btn btn-primary mt-0">Kaydet</button>
-                    </div>
-                </div>
-            </div>
+<div class="content">
+    <div class="container d-grid">
+        <div class="div">
+            <button mat-raised-button color="primary" class=" float-end mt-5">Tema Ekle</button>
         </div>
-        <h5 class="mt-5">Dark Tema</h5>
-        <div class="row p-3 mb-3">
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(0)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput0" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
+        <div *ngFor="let item of list">
+            <mat-card class="mb-4 mt-3">
+                <mat-grid-list cols="5" rowHeight="2:1">
+                    <div *ngFor="let item of items; let i = index">
+                        <mat-grid-tile>
+                            <div class="input-group mb-3">
+                                <button class="clipboard" onclick="myFunction(1)"><i class="bi bi-copy"></i></button>
+                                <input [id]="'myInput' +i" type="text" class="form-control" placeholder="Username">
 
-                    <div id="copyNotification"></div>
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(1)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput1" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(2)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput2" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(3)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput3" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(4)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput4" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(5)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput5" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-        </div>
-        <h5 class="mt-5">Light Tema</h5>
-        <div class="row p-3 mb-3">
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(6)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput6" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(7)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput7" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(8)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput8" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(9)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput9" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(10)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput10" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(11)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput11" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-        </div>
-        <h5 class="mt-5">Kendi Temam</h5>
-        <div class="row p-3 mb-3">
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(12)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput12" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(13)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput13" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(14)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput14" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(15)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput15" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(16)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput16" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="input-group mb-3">
-                    <button class="clipboard" onclick="myFunction(17)"><i class="bi bi-copy"></i></button>
-                    <input id="myInput17" type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1" value="Hello World">
-                </div>
-            </div>
+                                <div id="copyNotification"></div>
+                            </div>
+                        </mat-grid-tile>
+                    </div>
+                </mat-grid-list>
+            </mat-card>
         </div>
     </div>
 </div>

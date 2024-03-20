@@ -21,7 +21,7 @@ import { BlogSummaryComponent } from './components/blog-summary/blog-summary.com
 import { BlogSummaryItemComponent } from './components/blog-summary/blog-summary-item/blog-summary-item.component';
 import { BlockquoteComponent } from './components/blockquote/blockquote.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -36,8 +36,17 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {MatBadgeModule} from '@angular/material/badge';
-
+import { MatBadgeModule } from '@angular/material/badge';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list'; 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { SidenavComponent } from './components/admin/sidenav/sidenav.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { NavComponent } from './components/admin/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +66,10 @@ import {MatBadgeModule} from '@angular/material/badge';
     BlogSummaryComponent,
     BlogSummaryItemComponent,
     BlockquoteComponent,
-    LoginpageComponent
+    LoginpageComponent,
+    SidenavComponent,
+    AdminPanelComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +77,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     CommonModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MatGridListModule,
     MatCardModule,
     MatTableModule,
@@ -79,7 +92,14 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatPaginatorModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-    MatBadgeModule
+    MatBadgeModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

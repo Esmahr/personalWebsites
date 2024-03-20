@@ -1,0 +1,16 @@
+.navbar{
+    background-color: #fdfdfd;
+}
+
+ul{
+    list-style: none;
+    padding: 0rem;
+    justify-content: space-between;
+}
+a{
+    padding-left: 0rem;
+}
+
+.right{
+    float: right;
+}
