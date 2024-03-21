@@ -3,14 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.css']
+  styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
   name = "Angular Toggle Show Hide";
-  showMyContainer: boolean = false;
+  showMyContainer: boolean = true;
 
-  status: boolean = false;
-  statusLink: boolean = false;
+  status: boolean = true;
+  statusLink: boolean = true;
   clickEvent() {
     this.status = !this.status;
 

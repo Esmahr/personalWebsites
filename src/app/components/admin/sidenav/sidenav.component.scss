@@ -1,0 +1,86 @@
+.sidebarMenu {
+    color: #303030;
+    width: auto;
+    height: 100vh;
+    border-right: 3px solid #fbfbfb;
+    background-color: #f7f9fa;
+    transition: .40s;
+    display: inline-block;
+}
+
+.genisSideBar {
+    width: 180px;
+}
+
+.darSideBar {
+    width: 60px;
+}
+
+.nav {
+    width: 100%;
+    .nav-item {
+        margin: 0rem .5rem;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+
+        .nav-link {
+            color: #00224D !important;
+            font-size: 16px;
+            padding: .4rem .5rem;
+
+            .navIcon {
+                display: inline-flex;
+                justify-content: center;
+                width: 26px;
+                height: 26px;
+                color: #00224D;
+                border-radius: 4px;
+            }
+            .navitemtext{
+                font-size: 15px;
+                margin-left: .3rem;
+            }
+
+            .navLinkGenis {
+                display: inline-block;
+                visibility: visible;
+            }
+
+            .navLinkDar {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+
+    .active-link {
+        background-color: #f1f1f1;
+        font-weight: 500;
+    }
+}
+
+.genisSideBarAlt {
+    width: 50px;
+    padding-top: .6rem;
+    float: right;
+    height: 4rem;
+}
+
+.darSideBarAlt {
+    width: 60px;
+    padding-top: .6rem;
+    height: 4rem;
+}
+
+button {
+    border: none;
+    margin-right: .2rem;
+    background-color: transparent;
+    img {
+        height: 28px;
+        width: 28px;
+    }
+}
