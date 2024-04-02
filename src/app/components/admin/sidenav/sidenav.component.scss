@@ -2,33 +2,42 @@
     color: #303030;
     width: auto;
     height: 100vh;
-    border-right: 3px solid #fbfbfb;
-    background-color: #f7f9fa;
+    border-right: 1px solid #dae0ec;
+    background-color: #fff;
     transition: .40s;
     display: inline-block;
 }
 
 .genisSideBar {
-    width: 180px;
+    width: 260px;
+
+    .sideBarOrta {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    svg {
+        margin-right: .5rem;
+    }
 }
 
 .darSideBar {
-    width: 60px;
+    width: 4.6rem;
 }
 
 .nav {
     width: 100%;
+
     .nav-item {
         margin: 0rem .5rem;
         border-radius: 4px;
-
-        &:hover {
-            background-color: #f1f1f1;
-        }
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+        margin-top: .1rem;
 
         .nav-link {
             color: #00224D !important;
-            font-size: 16px;
             padding: .4rem .5rem;
 
             .navIcon {
@@ -39,8 +48,9 @@
                 color: #00224D;
                 border-radius: 4px;
             }
-            .navitemtext{
-                font-size: 15px;
+
+            .navitemtext {
+                font-size: 17px;
                 margin-left: .3rem;
             }
 
@@ -67,20 +77,34 @@
     padding-top: .6rem;
     float: right;
     height: 4rem;
+    margin-right: .3rem
 }
 
 .darSideBarAlt {
     width: 60px;
     padding-top: .6rem;
     height: 4rem;
+    margin-left: .6rem;
 }
 
 button {
     border: none;
     margin-right: .2rem;
     background-color: transparent;
+
     img {
-        height: 28px;
-        width: 28px;
+        height: 40px;
+        width: 40px;
     }
+}
+
+svg {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 5px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: transparent;
 }

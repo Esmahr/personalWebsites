@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #fff;
+    transition: box-shadow .2s linear;
+    box-shadow: 0 3px 3px #3042801a;
+    height: 4rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0rem;
+    justify-content: space-between;
+}
+
+a {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.right {
+    float: right;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        margin-right: .5rem;
+    }
+}

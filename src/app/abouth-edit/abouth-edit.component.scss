@@ -1,7 +1,82 @@
-.profile-img-group {
-    height: 24.5rem;
+#my-info-edit {
+    display: flex;
+    width: 95%;
+    padding: 5rem;
 
-    img {
-        width: 100%;
+    #my-photo {
+        width: 30%;
+        padding-right: 2rem;
+        text-align: center;
+        position: relative;
+
+        .img-group {
+            position: relative;
+        }
+
+        img {
+            width: 90%;
+            margin: auto;
+            display: block;
+        }
+
+        .modal-buton {
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 90%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-weight: 500;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        &:hover #hover-content {
+            opacity: 1;
+        }
     }
+
+    #my-info {
+        width: 70%;
+
+        .name,
+        .surname,
+        .mail {
+            width: 50%;
+        }
+
+        .experience,
+        .gender {
+            width: 24%;
+        }
+
+        .github,
+        .youtube,
+        .medium {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.card {
+    padding: 1.5rem;
+    box-shadow: 3px 3px 26px #17181800, 0 2px 4px #00000014 !important;
+    border-color: rgba(101, 126, 174, .25);
+    border-radius: 9px;
+    margin-bottom: 2rem;
+}
+
+input{
+    font-size: 18px;
+}
+
+label{
+    font-size: 18px;
 }
