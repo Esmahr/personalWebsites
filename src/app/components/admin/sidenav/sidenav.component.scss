@@ -4,16 +4,15 @@
     height: 100vh;
     border-right: 1px solid #dae0ec;
     background-color: #fff;
-    transition: .40s;
     display: inline-block;
 }
 
 .genisSideBar {
-    width: 260px;
+    width: 220px;
 
     .sideBarOrta {
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
     }
     svg {
         margin-right: .5rem;
@@ -21,7 +20,7 @@
 }
 
 .darSideBar {
-    width: 4.6rem;
+    width: 4rem;
 }
 
 .nav {
@@ -38,7 +37,8 @@
 
         .nav-link {
             color: #00224D !important;
-            padding: .4rem .5rem;
+            padding: .4rem .3rem;
+            display: flex;
 
             .navIcon {
                 display: inline-flex;
@@ -89,18 +89,19 @@
 
 button {
     border: none;
-    margin-right: .2rem;
+    margin-right: .8rem;
     background-color: transparent;
 
     img {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
+        margin-top: .4rem;
     }
 }
 
 svg {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
     margin-bottom: 5px;
 }
 

@@ -6,11 +6,5 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./known-technologies.component.scss']
 })
 export class KnownTechnologiesComponent {
-  isTop = true;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const threshold = 50;
-    this.isTop = window.scrollY < threshold;
-  }
+ 
 }

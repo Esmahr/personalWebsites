@@ -1,7 +1,8 @@
 #my-info-edit {
     display: flex;
     width: 95%;
-    padding: 5rem;
+    padding: 4rem;
+    padding-bottom: 3rem;
 
     #my-photo {
         width: 30%;
@@ -73,8 +74,14 @@
     margin-bottom: 2rem;
 }
 
-input{
-    font-size: 18px;
+input, .input-group-text{
+    font-size: 17px;
+    height: 2rem;
+}
+
+.input-group-text{
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
 }
 
 label{

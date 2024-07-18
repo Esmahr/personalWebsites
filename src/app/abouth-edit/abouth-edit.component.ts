@@ -23,7 +23,6 @@ export class AbouthEditComponent {
     if (token) {
       this.userService.getUserInfo(token).subscribe({
         next: (response) => {
-          console.log('User info:', response);
           this.userInfo = response.data;
           if (this.userInfo.profilePhotoLink) {
             this.imageUrl = this.userInfo.profilePhotoLink;
@@ -50,28 +49,16 @@ export class AbouthEditComponent {
       };
     }
   }
-  
-  onSubmit() {
+  saveUserInfo() {
     const token = localStorage.getItem('token');
     if (token) {
       const formData = new FormData();
-      formData.append('firstName', this.userInfo.firstName);
-      formData.append('lastName', this.userInfo.lastName);
-      formData.append('email', this.userInfo.email);
-      formData.append('experience', this.userInfo.experience);
-      formData.append('gender', this.userInfo.gender);
-      formData.append('githubUsername', this.userInfo.githubUsername);
-      formData.append('mediumUsername', this.userInfo.mediumUsername);
-      formData.append('youtubeUsername', this.userInfo.youtubeUsername);
-      
-      // Profil fotoğrafını dosya olarak ekleyin, eğer varsa
-      if (this.selectedFile) {
-        formData.append('profilePhoto', this.selectedFile, this.selectedFile.name);
-      }
+      formData.append('file', this.selectedFile); // Append the file
+      formData.append('userUpdateRequest', JSON.stringify(this.userInfo)); // Append the user info as a JSON string
   
       this.userService.updateUser(token, formData).subscribe({
         next: (response) => {
-          console.log('User updated successfully', response);
+          console.log('User updated successfully:', response);
         },
         error: (error) => {
           console.error('Error updating user', error);
@@ -79,5 +66,4 @@ export class AbouthEditComponent {
       });
     }
   }
-  
 }

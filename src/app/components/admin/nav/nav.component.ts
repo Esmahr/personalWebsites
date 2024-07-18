@@ -34,7 +34,6 @@ export class NavComponent {
     if (token) {
       this.userService.getUserInfo(token).subscribe({
         next: (response) => {
-          console.log('User info:', response);
           this.userInfo = response.data;
           if (this.userInfo.profilePhotoLink) {
             this.imageUrl = this.userInfo.profilePhotoLink;

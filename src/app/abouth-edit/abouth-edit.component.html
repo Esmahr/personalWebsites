@@ -1,113 +1,116 @@
 <div id="my-info-edit">
-  <div id="my-photo">
-    <div class="card">
-      <div class="img-group">
-        <img *ngIf="imageUrl; else defaultImage" [src]="imageUrl" alt="Profil Resmi">
-
-        <label id="hover-content" class="modal-buton" type="button" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop">
-          Profil Resmini Değiştir
-        </label>
+  <form action="">
+    <div class="d-flex">
+      <div id="my-photo">
+        <div class="card">
+          <div class="img-group">
+            <img *ngIf="imageUrl; else defaultImage" [src]="imageUrl" alt="Profil Resmi">
+            <label id="hover-content" class="modal-buton" type="button" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              Profil Resmini Değiştir
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Profil Fotoğrafi Değiştir</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img *ngIf="imageUrl; else defaultImage" [src]="imageUrl" alt="Profil Resmi" style="width: 90%;">
+              <ng-template #defaultImage>
+                <img [src]="userInfo?.profilePhotoLink" alt="Varsayılan Profil Resmi">
+              </ng-template>
+              <div class="upload-img text-center mt-4">
+                <input class="form-control image" type="file" id="formFile" (change)="onFileSelected($event)">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+              <button type="button" class="btn btn-primary">Kaydet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="my-info">
+        <div class="card">
+          <div class="d-flex name-surname">
+            <div class="me-3 name">
+              <label for="firstName" class="form-label">Ad</label>
+              <input type="text" class="form-control" id="firstName" [(ngModel)]="userInfo.firstName" name="firstName"
+                required>
+  
+            </div>
+            <div class="surname">
+              <label for="lastName" class="form-label">Soyad</label>
+              <input type="text" class="form-control" id="lastName" [(ngModel)]="userInfo.lastName" name="lastName"
+                required>
+  
+            </div>
+          </div>
+          <div class="d-flex info-detail mt-3">
+            <div class="me-3 mail">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="text" class="form-control" id="email" [(ngModel)]="userInfo.email" name="email" required>
+  
+            </div>
+            <div class="me-3 experience">
+              <label for="experience" class="form-label">Deneyim</label>
+              <input type="text" class="form-control" id="experience" [(ngModel)]="userInfo.experience" name="experience"
+                required>
+  
+            </div>
+            <div class="gender">
+              <label for="gender" class="form-label">Cinsiyet</label>
+              <select class="form-select" id="gender" [(ngModel)]="userInfo.gender" name="gender" required>
+                <option value="">Choose...</option>
+                <option>Kadın</option>
+                <option>Erkek</option>
+              </select>
+  
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="social-media">
+            <div class="me-3 github">
+              <label for="githubUsername" class="form-label">Github Kullanıcı Adı</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="githubUsername" [(ngModel)]="userInfo.githubUsername"
+                  name="githubUsername" required>
+  
+              </div>
+            </div>
+            <div class="me-3 medium">
+              <label for="mediumUsername" class="form-label">Medium Kullanıcı Adı</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="mediumUsername" [(ngModel)]="userInfo.mediumUsername"
+                  name="mediumUsername" required>
+  
+              </div>
+            </div>
+            <div class="youtube">
+              <label for="youtubeUsername" class="form-label">Youtube Kullanıcı Adı</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="youtubeUsername" [(ngModel)]="userInfo.youtubeUsername"
+                  name="youtubeUsername" required>
+  
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Profil Fotoğrafi Değiştir</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img *ngIf="imageUrl; else defaultImage" [src]="imageUrl" alt="Profil Resmi" style="width: 90%;">
-          <ng-template #defaultImage>
-            <img [src]="userInfo?.profilePhotoLink" alt="Varsayılan Profil Resmi">
-          </ng-template>
-          <div class="upload-img text-center mt-4">
-            <input class="form-control image" type="file" id="formFile" (change)="onFileSelected($event)">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
-          <button type="button" class="btn btn-primary">Kaydet</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <button class="btn btn-sm" (click)="saveUserInfo()">Kaydet</button>
 
-  <div id="my-info">
-    <form action="">
-      <div class="card">
-        <div class="d-flex name-surname">
-          <div class="me-3 name">
-            <label for="firstName" class="form-label">Ad</label>
-            <input type="text" class="form-control" id="firstName" [(ngModel)]="userInfo.firstName" name="firstName"
-              required>
-            
-          </div>
-          <div class="surname">
-            <label for="lastName" class="form-label">Soyad</label>
-            <input type="text" class="form-control" id="lastName" [(ngModel)]="userInfo.lastName" name="lastName"
-              required>
-            
-          </div>
-        </div>
-        <div class="d-flex info-detail mt-3">
-          <div class="me-3 mail">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="text" class="form-control" id="email" [(ngModel)]="userInfo.email" name="email" required>
-            
-          </div>
-          <div class="me-3 experience">
-            <label for="experience" class="form-label">Deneyim</label>
-            <input type="text" class="form-control" id="experience" [(ngModel)]="userInfo.experience" name="experience"
-              required>
-            
-          </div>
-          <div class="gender">
-            <label for="gender" class="form-label">Cinsiyet</label>
-            <select class="form-select" id="gender" [(ngModel)]="userInfo.gender" name="gender" required>
-              <option value="">Choose...</option>
-              <option>Kadın</option>
-              <option>Erkek</option>
-            </select>
-            
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="social-media">
-          <div class="me-3 github">
-            <label for="githubUsername" class="form-label">Github Kullanıcı Adı</label>
-            <div class="input-group has-validation">
-              <span class="input-group-text">@</span>
-              <input type="text" class="form-control" id="githubUsername" [(ngModel)]="userInfo.githubUsername"
-                name="githubUsername" required>
-
-            </div>
-          </div>
-          <div class="me-3 medium">
-            <label for="mediumUsername" class="form-label">Medium Kullanıcı Adı</label>
-            <div class="input-group has-validation">
-              <span class="input-group-text">@</span>
-              <input type="text" class="form-control" id="mediumUsername" [(ngModel)]="userInfo.mediumUsername"
-                name="mediumUsername" required>
-
-            </div>
-          </div>
-          <div class="youtube">
-            <label for="youtubeUsername" class="form-label">Youtube Kullanıcı Adı</label>
-            <div class="input-group has-validation">
-              <span class="input-group-text">@</span>
-              <input type="text" class="form-control" id="youtubeUsername" [(ngModel)]="userInfo.youtubeUsername"
-                name="youtubeUsername" required>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
+  </form>
 </div>

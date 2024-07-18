@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AbouthEditComponent } from './abouth-edit/abouth-edit.component';
 import { ProjectEditComponent } from './project-edit/project-edit.component';
 import { BlogEditComponent } from './blog-edit/blog-edit.component';
@@ -53,7 +52,6 @@ import { NavComponent } from './components/admin/nav/nav.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    DashboardComponent,
     AbouthEditComponent,
     ProjectEditComponent,
     BlogEditComponent,
